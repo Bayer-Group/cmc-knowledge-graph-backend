@@ -8,13 +8,13 @@ The Backend Service is written in Node.Js using Typescript.
 The backend web-service docker image would automatically get built by running the docker-compose up command in the Setup Project
 
 If you want to manually build the docker image for the web-service, please use below command.
-`docker-compose up --build kge-web-service`
+`docker-compose up --build cmc-kge-backend`
 
 Please make sure you have the *fuseki* image running at your localhost:3030 port.
 
-The fuseki image will take care of loading the initial graphs *https://pid.bayer.com/kge/triplestores* <br /> *https://pid.bayer.com/kge/triplestoreSystems* to the local triplestore.
+The fuseki image will take care of loading the initial graphs *https://github.com/Bayer-Group/kge/triplestores* <br /> *https://github.com/Bayer-Group/kge/triplestoreSystems* to the local triplestore.
 
-If you want to add your own graphs and datasets, they can be done easily via the fuseki. Please use the *kge:COLIDDataset* entry in the triplestores graph for reference.
+If you want to add your own graphs and datasets, they can be done easily via the fuseki. Please use the *kge:CMCKGEDataset* entry in the triplestores graph for reference.
 
 The available graphs in the triplestore can be then easily visualized on the Knowledge Graph Explorer.
 
