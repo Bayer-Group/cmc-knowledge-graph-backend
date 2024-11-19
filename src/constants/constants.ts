@@ -8,7 +8,7 @@ const constants = {
     CONTENT_TYPE_SPARQL_UPDATE: "application/sparql-update",
     ACCEPT_SPARQL_JSON: "application/sparql-results+json",
     ACCEPT_NQUADS: "application/n-triples",
-    QUERY_PREFIXES: `PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX eco: <http://pid.bayer.com/kos/19014/>`,
+    QUERY_PREFIXES: `PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX eco: <http://github.com/Bayer-Group/kos/19014/>`,
     TABLE_VIEWS: "TableViews",
     SAVED_GRAPHS: "SavedGraphs"
 }

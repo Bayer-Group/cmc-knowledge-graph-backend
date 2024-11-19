@@ -129,7 +129,7 @@ export const sparqlAutocompleteOutgoing = (query, dbconfig) => {
   return (
     constants.QUERY_PREFIXES +
     `
-  prefix kge:   <https://pid.bayer.com/kge/> 
+  prefix kge:   <https://github.com/Bayer-Group/kge/> 
   construct {
   ?s ?p ?o.
 }
@@ -139,7 +139,7 @@ where {
   values (?triplestore ?namedGraphs) {${joinAsValuesList(dbconfig)}
 } 
   
-  graph <https://pid.bayer.com/kge/triplestores> {
+  graph <https://github.com/Bayer-Group/kge/triplestores> {
     ?triplestore a kge:Triplestore;
 		rdfs:label ?label ;
         kge:password    ?password ;
@@ -148,15 +148,15 @@ where {
         kge:updatePath  ?updatePath ;
         kge:user        ?username ;
   }
-  graph <https://pid.bayer.com/kge/triplestoreSystems> {
+  graph <https://github.com/Bayer-Group/kge/triplestoreSystems> {
     ?triplestroreSystem 
         kge:host      ?host ;
         kge:port      ?port ;
         kge:protocol  ?protocol .
   }
  
-  #bind ( coalesce(uri(concat(str(?protocol),"://",?username,":",?password,"@",str(?host),":",str(?port),str(?queryPath))), "") as ?connectionURI )
-  bind ( coalesce(uri(concat(str(?protocol),"://",str(?queryPath))), "") as ?connectionURI )
+  bind ( coalesce(uri(concat(str(?protocol),"://",?username,":",?password,"@",str(?host),":",str(?port),str(?queryPath))), "") as ?connectionURI )
+  #bind ( coalesce(uri(concat(str(?protocol),"://",str(?queryPath))), "") as ?connectionURI )
   Service ?connectionURI{
     SELECT * {
       graph ?namedGraphs{
@@ -174,7 +174,7 @@ export const sparqlAutocompleteOutgoingDefaultGraph = (defaultGraphsList) => {
   return `
   UNION {
     values (?triplestoreDefault) {${defaultGraphsList}}
-    graph <https://pid.bayer.com/kge/triplestores> {
+    graph <https://github.com/Bayer-Group/kge/triplestores> {
     ?triplestoreDefault a kge:Triplestore;
     rdfs:label ?label ;
     kge:password ?password ;
@@ -183,15 +183,15 @@ export const sparqlAutocompleteOutgoingDefaultGraph = (defaultGraphsList) => {
     kge:updatePath ?updatePath ;
     kge:user ?username ;
     }
-    graph <https://pid.bayer.com/kge/triplestoreSystems> {
+    graph <https://github.com/Bayer-Group/kge/triplestoreSystems> {
     ?triplestroreSystem
     kge:host ?host ;
     kge:port ?port ;
     kge:protocol ?protocol .
     }
     
-    #bind ( coalesce(uri(concat(str(?protocol),"://",?username,":",?password,"@",str(?host),":",str(?port),str(?queryPath))), "") as ?connectionURI )
-    bind ( coalesce(uri(concat(str(?protocol),"://",str(?queryPath))), "") as ?connectionURI )
+    bind ( coalesce(uri(concat(str(?protocol),"://",?username,":",?password,"@",str(?host),":",str(?port),str(?queryPath))), "") as ?connectionURI )
+    #bind ( coalesce(uri(concat(str(?protocol),"://",str(?queryPath))), "") as ?connectionURI )
      Service ?connectionURI {
       SELECT * {
     ?s ?p ?o

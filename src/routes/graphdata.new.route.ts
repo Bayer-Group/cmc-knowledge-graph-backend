@@ -44,9 +44,9 @@ const router = express.Router();
  *         description: OK 
  *         examples: 
  *           application/n-triples: |- 
- *             <http://pid.bayer.com/kos/19014/1/ggvcm> <http://pid.bayer.com/kos/19014/firstName> "G\u00F6khan" .
- *             <http://pid.bayer.com/kos/19014/1/ggvcm> <http://pid.bayer.com/kos/19014/lastName> "Coskun" .
- *             <http://pid.bayer.com/kos/19014/1/ggvcm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://pid.bayer.com/kos/19014/Person> .
+ *             <http://github.com/Bayer-Group/kos/19014/1/ggvcm> <http://github.com/Bayer-Group/kos/19014/firstName> "G\u00F6khan" .
+ *             <http://github.com/Bayer-Group/kos/19014/1/ggvcm> <http://github.com/Bayer-Group/kos/19014/lastName> "Coskun" .
+ *             <http://github.com/Bayer-Group/kos/19014/1/ggvcm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://github.com/Bayer-Group/kos/19014/Person> .
  */
 router.post('/', validateDBConfig, async function (req, res) {
     logger.info("START POST /graphDataNew", req.body);

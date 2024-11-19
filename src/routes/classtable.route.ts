@@ -41,7 +41,7 @@ const router = express.Router();
 
  /**
 {
-    "classUri": "http://pid.bayer.com/kos/19014/Person",
+    "classUri": "http://github.com/Bayer-Group/kos/19014/Person",
     "attributes": [
         {
             "uri": "http://10.122.106.18:3000/lastName",
@@ -154,7 +154,7 @@ router.post('/',  async function(req, res) {
 
  /**
 {
-    "attributes": ["http://pid.bayer.com/kos/19014/worksOn", "http://pid.bayer.com/kos/19014/isLocateIn"],
+    "attributes": ["http://github.com/Bayer-Group/kos/19014/worksOn", "http://github.com/Bayer-Group/kos/19014/isLocateIn"],
     "labels": ["http://test.de/hasLabel"]
 }
   */

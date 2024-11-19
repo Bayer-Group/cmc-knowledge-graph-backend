@@ -7,7 +7,7 @@ const options = {
         description: 'This API provides Endpoints to query a TripleStore. The Result will be in a for D3 understandable format.',
         version: '0.0.1', // Version (required)
         contact: {
-          email: "erik.krummeich.ext@bayer.com"
+          email: "kanwalmeet.singhkochar.ext@bayer.com"
         }
       },
       tags: [{

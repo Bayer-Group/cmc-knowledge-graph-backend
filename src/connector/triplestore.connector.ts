@@ -34,7 +34,7 @@ class TripleStoreConnector implements ITripleStoreConnector {
         const httpsAgent = new https.Agent({
             rejectUnauthorized: false, 
           })
-        let proxyUrl = "http://EPEIJ:n999E_0I444DTFP!@10.185.190.100:8080/";
+        let proxyUrl = "http://CWID:PWD!@10.185.190.100:8080/";
           
         let localProxyAgent = getProxyHttpAgent({
                        proxy: proxyUrl,
@@ -430,11 +430,11 @@ private async fetchStardogData(): Promise<any> {
 
 async postClassTableAsync(host:string, query:string,uuid:string,user:string): Promise<any> {
     try {
-        // host = "https://pid.bayer.com"
+        // host = "https://github.com/Bayer-Group"
          let sparql = `INSERT DATA {
-            GRAPH <https://pid.bayer.com/kge/tableViews> {
-            <${host}/classTable/${uuid}> <https://pid.bayer.com/kge/creator> "${user}" .
-            <${host}/classTable/${uuid}> <https://pid.bayer.com/kge/hasStoredQuery> "${query}" .
+            GRAPH <https://github.com/Bayer-Group/kge/tableViews> {
+            <${host}/classTable/${uuid}> <https://github.com/Bayer-Group/kge/creator> "${user}" .
+            <${host}/classTable/${uuid}> <https://github.com/Bayer-Group/kge/hasStoredQuery> "${query}" .
             }
        }`;
        const baseURL = `${this.tripleStore.protocol}://${this.tripleStore.serviceHost}:${this.tripleStore.port}${this.tripleStore.updatePath}`

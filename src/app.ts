@@ -15,7 +15,6 @@ import graphDataNew from './routes/graphdata.new.route';
 import count from './routes/count.route';
 import autocomplete from './routes/autocomplete.route';
 import classtable from './routes/classtable.route';
-import rwdapi from './routes/rwd.route';
 // import swagger
 import swaggerSpec from './swagger/swagger';
 import logger from './logger/logger'
@@ -43,10 +42,7 @@ app.use('/count', count);
 //app.use('/paths', paths);
 app.use('/autocomplete', autocomplete);
 app.use('/classtable', classtable);
-app.use('/rwdapi', rwdapi);
 
-//rwd api experimentation
-app.use('/rwdapi', rwdapi);
 
 app.listen(config().app.port, function () {
     logger.info('Application has been started', {port: config().app.port, environment: process.env.NODE_ENV == undefined ? "local" : process.env.NODE_ENV});
